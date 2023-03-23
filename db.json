@@ -1,0 +1,124 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "cin": "x122255",
+      "firstName": "EL Hassani",
+      "lastName": "Saad",
+      "image": "https://media.licdn.com/dms/image/C4E03AQGBD6p81Z7iZg/profile-displayphoto-shrink_800_800/0/1626800319565?e=2147483647&v=beta&t=4Ps1Wkj9j5yBRTwttSD2aH1JQ4Z34Grg3XX79Uv3Jik",
+      "email": "rcourtese0@clickbank.net",
+      "gender": "Mr. ",
+      "address": "Hay ryad, rabat",
+      "balance": 2616.0879999999997,
+      "accountType": "saving "
+    },
+    {
+      "id": 2,
+      "cin": "x122244",
+      "firstName": "Pooh",
+      "lastName": "Maliphant",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "pmaliphant1@illinois.edu",
+      "gender": "Mrs",
+      "address": "1 Ilene Road",
+      "balance": 1775,
+      "accountType": "cheking"
+    },
+    {
+      "id": 3,
+      "cin": "x122233",
+      "firstName": "Charla",
+      "lastName": "Courteney",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "ccourteney2@nih.gov",
+      "gender": "Mr",
+      "address": "37 Dapin Point",
+      "balance": 19550,
+      "accountType": "cheking"
+    },
+    {
+      "id": 4,
+      "cin": "x122200",
+      "firstName": "Bogey",
+      "lastName": "Stothard",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "bstothard3@theatlantic.com",
+      "gender": "Mrs",
+      "address": "58 Pleasure Point",
+      "balance": 10110,
+      "accountType": "saving"
+    },
+    {
+      "id": 5,
+      "cin": "xb122155",
+      "firstName": "Temple",
+      "lastName": "Roston",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "troston4@ox.ac.uk",
+      "gender": "Mrs",
+      "address": "734 Fairview Center",
+      "balance": 45400,
+      "accountType": "cheking"
+    },
+    {
+      "id": 7,
+      "cin": "x112255",
+      "firstName": "Temple2",
+      "lastName": "Roston",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "troston4@ox.ac.uk",
+      "gender": "Mr",
+      "address": "734 Fairview Center",
+      "balance": 0,
+      "accountType": "cheking"
+    },
+    {
+      "cin": "op22",
+      "firstName": "saad",
+      "lastName": "el hassani",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "jhvasgcg",
+      "gender": "Mr",
+      "address": "jvcsgc",
+      "balance": 5550,
+      "accountType": "test",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "cin": "hyu",
+      "firstName": "sdd",
+      "lastName": "ddf",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "gff",
+      "gender": "Mrs ",
+      "address": "1 Ilene Road",
+      "balance": 21072,
+      "accountType": "cheking"
+    },
+    {
+      "id": 10,
+      "cin": "hyu",
+      "firstName": "Tom",
+      "lastName": "Maliphant",
+      "image": "https://www.shareicon.net/data/128x128/2016/07/26/802013_man_512x512.png",
+      "email": "pmaliphant1@illinois.edu",
+      "gender": "Mr ",
+      "address": "1 Ilene Road",
+      "balance": 3385,
+      "accountType": "cheking"
+    },
+    {
+      "id": 11,
+      "cin": "k2555",
+      "firstName": "saad",
+      "lastName": "saad",
+      "image": "#",
+      "email": "eckolima20@gmail.com",
+      "gender": "Mrs. ",
+      "address": "dhvjds",
+      "balance": 2500,
+      "accountType": "test"
+    }
+  ]
+}

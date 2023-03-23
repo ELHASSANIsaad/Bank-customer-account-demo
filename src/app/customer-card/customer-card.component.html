@@ -1,0 +1,190 @@
+<!--
+<div
+  class="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl"
+>-->
+
+<div class="rounded-2xl h-full bg-gradient-to-r from-blue-600  to-green-300 p-1 shadow-lg">
+    <div class="flex flex-row w-auto h-full p-4 pb-7 bg-gray-100 rounded-lg">
+        <div class="w-4/5">
+            <div class="h-3/5 flex flex-row">
+                <div class="w-1/4">
+                    <img [src]="customer?.image" alt="User Image" class="w-20 h-20 rounded-full" />
+                </div>
+
+                <div class="w-3/4 px-4 py-2">
+                    <h2 class="text-xl font-semibold">{{customer?.gender}} {{customer?.firstName}}  {{customer?.lastName}}</h2>
+                    <p class="text-sm text-gray-500">CIN : {{customer?.cin}}</p>
+                    <p class="text-sm text-gray-500"> Mail : {{customer?.email}}</p>
+                    <p class="text-sm text-gray-500">Address : {{customer?.address}}</p>
+                </div>
+            </div>
+
+            <div class="h-2/5 flex flex-col items-center justify-center">
+                <div class="flex flex-row">
+                  <div class="px-4 py-2">
+                    <h2 class="text-sm font-semibold">Account Balance:</h2>
+                    <p class="text-xl font-bold">{{customer?.balance | currency:'MAD ':'symbol':'4.2-2'}}</p>
+                  </div>
+                  <div class="px-4 py-2">
+                    <h2 class="text-sm font-semibold">Account Type:</h2>
+                    <p class="text-xl font-bold">{{customer?.accountType}}</p>
+                  </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+
+
+                    <div class="bg-blue-500 hover:bg-blue-700 text-white text-center  py-2 px-4 rounded-2xl mr-4">Deposit 
+                        <app-editable-element  (valueChange)="Deposit($event)"></app-editable-element>
+                    </div>
+                    <div class="bg-red-500 hover:bg-red-700 text-white text-center py-2 px-4 rounded-2xl">Withdraw 
+                        <app-editable-element  (valueChange)="withdraw($event)"></app-editable-element>
+                    </div>
+
+
+
+<!--
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl mr-4">
+                    Deposit
+                  </button>
+                  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">
+                    Withdraw
+                  </button> -->
+                </div>
+              </div>
+              
+        </div>
+
+        <div class="w-1/5 flex flex-col justify-between">
+            <a (click)="RedirectToDetail()"
+                class="bg-blue-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-2xl mb-2 text-center">Details</a>
+
+            <a (click)="UpdateCustomer()"
+                class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-2xl mb-2 text-center">Update</a>
+
+                <button class="bg-red-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-2xl text-center" 
+    [disabled]="isDeleteLoading" (click)="onDelete()">{{isDeleteLoading ? 'Loading...' : 'Delete'}}</button>
+
+<!--
+            <a href="#"
+                class="bg-red-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-2xl text-center">Delete</a>-->
+        </div>
+    </div>
+</div>
+
+<!--
+
+<div class="flex flex-row w-full h-auto bg-gray-100 p-4 rounded-lg">
+ 
+    <div class="w-4/5">
+  
+      <div class="h-3/5 flex flex-row">
+    
+        <div class="w-1/4">
+          <img src="user-image.jpg" alt="User Image" class="w-full h-full rounded-full">
+        </div>
+   
+        <div class="w-3/4 px-4 py-2">
+          <h2 class="text-xl font-semibold">John Doe</h2>
+          <p class="text-sm text-gray-500">#123456</p>
+          <p class="text-sm text-gray-500">john.doe@example.com</p>
+          <p class="text-sm text-gray-500">555-1234</p>
+        </div>
+      </div>
+
+      <div class="h-2/5 flex flex-row items-center">
+ 
+        <div class="w-1/2 px-4 py-2">
+          <h2 class="text-lg font-semibold">Account Balance:</h2>
+          <p class="text-2xl font-bold">$1,000.00</p>
+        </div>
+        <div class="w-1/2 px-4 py-2">
+          <h2 class="text-lg font-semibold">Account Type:</h2>
+          <p class="text-lg font-bold">Premium</p>
+        </div>
+      
+        <div class="w-1/3 px-4 py-2 flex flex-col items-center justify-center">
+          <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-2">Deposit</button>
+          <button class="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Withdraw</button>
+        </div>
+      </div>
+    </div>
+   
+    <div class="w-1/5 flex flex-col justify-between">
+    
+      <a href="#" class="bg-green-300 hover:bg-green-400 text-gray-800 font-bold py-2 px-4 rounded-full mb-2 text-center flex-grow-0">Details</a>
+  
+      <a href="#" class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded-full mb-2 text-center flex-grow-0">Update</a>
+   
+      <a href="#" class="bg-red-300 hover:bg-red-400 text-gray-800 font-bold py-2 px-4 rounded-full text-center flex-grow-1">Delete</a>
+    </div>
+  </div>
+  
+-->
+
+<!--
+
+
+-->
+
+<!--
+
+<div class="col-span-1 flex flex-col text-center border shadow rounded-md p-4 h-full">
+    <img class="mx-auto h-16 w-16" [src]="customer?.image">
+    <h3 class="text-sm text-gray-900 mt-2">
+       
+
+    </h3>
+    <a class="text-gray-400 underline" (click)="RedirectToDetail()">See details</a>
+    <p class="text-sm text-gray-500 mt-2">{{customer?.firstName}}</p>
+    <p class="text-sm text-gray-500 mt-2">{{customer?.email}}</p>
+
+    <p class="text-sm text-gray-500 mt-2">{{customer?.balance | currency:'MAD':'symbol':'4.2-2'}}</p>
+    <p class="text-sm text-gray-500 mt-2">{{customer?.accountType}}</p>
+    <a class="text-gray-400 underline" (click)="UpdateCustomer()">Update</a>
+   
+
+    <div class="text-green-900">Deposit: 
+        <app-editable-element  (valueChange)="Deposit($event)"></app-editable-element>
+    </div>
+    <div class="text-green-900">Withdraw: 
+        <app-editable-element  (valueChange)="withdraw($event)"></app-editable-element>
+    </div>
+
+    <button class="mt-2 border rounded-md border-red-500 bg-red-100 text-red-500 disabled:opacity-50" 
+    [disabled]="isDeleteLoading" (click)="onDelete()">{{isDeleteLoading ? 'Loading...' : 'Delete'}}</button>   
+        
+
+   
+
+
+</div>
+
+
+-->
+
+<!--
+
+    <div class="col-span-1 flex flex-col text-center border shadow rounded-md p-4 h-full">
+    <img class="mx-auto h-32 w-32" [src]="pokemon?.image">
+    <h3 class="text-sm text-gray-900 mt-2">
+        <app-editable-element [value]="pokemon?.name" (valueChange)="onNameChange($event)"></app-editable-element>
+    </h3>
+    <a class="text-gray-400 underline" [routerLink]="['details', pokemon?.id]">See details</a>
+    <p class="text-sm text-gray-500 mt-2">{{pokemon?.lastSeen | date: 'shortDate'}}</p>
+    <div class="flex gap-6 mx-auto">
+        <div class="text-green-900">Attack: 
+            <app-editable-element [value]="pokemon?.attack" (valueChange)="onAttackChange($event)"></app-editable-element>
+        </div>
+        <div class="text-red-900">Defense: 
+            <app-editable-element [value]="pokemon?.defense" (valueChange)="onDefenseChange($event)"></app-editable-element>
+        </div>
+    </div>
+    <div class="flex gap-2 items-center mx-auto mt-2">
+        <img *ngFor="let type of pokemon?.types" class="h-6 w-6" [src]="type?.image">
+    </div>
+    <button class="mt-2 disabled:cursor-not-allowed" (click)="onCapture()" [ngClass]="{'text-red-600': pokemon?.captured }">{{pokemon?.captured ? 'Release': 'Capture'}}</button>
+    <button class="mt-2 border rounded-md border-red-500 bg-red-100 text-red-500 disabled:opacity-50" [disabled]="isDeleteLoading" (click)="onDelete()">{{isDeleteLoading ? 'Loading...' : 'Delete'}}</button>
+</div>
+
+
+-->

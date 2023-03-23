@@ -1,0 +1,19 @@
+<div class="bg-gray-800 pt-3">
+    <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+        <h1 class="font-bold pl-2">{{customer?.gender}} {{customer?.firstName}} {{customer?.lastName}}</h1>
+    </div>
+</div>
+
+
+<div *ngIf="customer" class="relative flex flex-col items-baseline justify-start gap-6 m-10 p-10 rounded-lg bg-white shadow-lg ">
+    <img class="h-40 w-40 rounded-full" [src]="customer.image" [alt]="customer.cin">
+ 
+        <h3 class="text-sm font-medium text-center text-gray-900">CIN   : {{customer.cin}}</h3>
+        <p class="text-sm font-medium text-center text-gray-900">First name : {{customer.firstName}}</p>
+        <p class="text-sm font-medium text-center text-gray-900">Last name : {{customer.lastName}}</p>
+        <p class="text-sm font-medium text-center text-gray-900">Email   : {{customer.email}}</p>
+        <p class="text-sm font-medium text-center text-gray-900">Address  : {{customer.address}}</p>
+        <p class="text-sm font-medium text-center text-gray-900">Balance   : {{customer.balance | currency:'MAD ':'symbol':'4.2-2'}}</p>
+        <p class="text-sm font-medium text-center text-gray-900">Account type : {{customer.accountType}}</p>
+
+</div>
