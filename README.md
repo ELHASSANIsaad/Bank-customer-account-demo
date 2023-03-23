@@ -2,7 +2,7 @@
  Bank customer account demo
 
 
-ScrenShot from the application, demo Bank customers with Angular
+ScrenShot from the application, demo Bank customers with Angular By EL HASSANI SAAD
 
 
 <img src="https://www.linkpicture.com/q/Capture01_1.png" alt="Alt text" title="Optional title">
